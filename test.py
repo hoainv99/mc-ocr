@@ -23,6 +23,7 @@ from PIL import Image
 
 from vietocr.tool.predictor import Predictor
 from vietocr.tool.config import Cfg
+import joblib
 
 def test(image):
     image = segment_single_images(image)
@@ -157,20 +158,21 @@ def test(image):
             inp1 = np.array(inp_task1[:100])
         else:
             inp1 = np.concatenate((inp_task1,np.zeros(100 - len(inp_task1), dtype=np.float32)))
-
-        out_task1 = 0.5
+            
+        out_task1 = model_task1.predict([inp1])  
+        out_task1 = out_task1.item()
     else:
         out_task1 = 0.2
         rs_text = "|||||||||"
-    print(rs_text)
+    return rs_text,out_task1
 
 if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     parser = argparse.ArgumentParser(description='MC-OCR inference')
-    parser.add_argument('--image_test', type=str, help='path to image')
+    parser.add_argument('--folder_test', type=str, help='path to folder')
     args = parser.parse_args()
 
-    image = cv2.imread(args.image_test)
+
     predict_svm = predict_svm()
     predict_phoBert = predict_phoBert()
     predict_image = Predictor_image()
@@ -181,8 +183,17 @@ if __name__ == '__main__':
     config['device'] = 'cuda:0'
     config['predictor']['beamsearch']=False
     text_recognizer = Predictor(config)
+    model_task1 = joblib.load("weights/model_task1.sav")
+    with open('results.csv', mode='w') as csv_file:
+        fieldnames = ['img_id', 'anno_image_quality', 'anno_texts']
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    
+        writer.writeheader()
+        for file_name in os.listdir(args.folder_test):
+            image = cv2.imread(os.path.join(args.folder_test,file_name))
+            rs_text,out_task1 = test(image)
+            writer.writerow({'img_id': file_name, 'anno_image_quality': out_task1, 'anno_texts': rs_text})
 
-    test(image)
 
 
 
