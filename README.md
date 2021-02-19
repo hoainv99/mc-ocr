@@ -12,9 +12,10 @@ Then :
 python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 ```
 ### Run evaluate with pre-trained model
-1. Download pretrained model from [here](https://drive.google.com/drive/folders/15WPsuPJDCzhp2SvYZLRj8mAlT3zmoAMW)
+1. Download pretrained model from [here](https://drive.google.com/drive/folders/1W-O3hPQc4szNezeZQnowNrn46tcgLwz8?usp=sharing)
 2. Add pretrained file to folder `weights/`
 3. Run test.py
 ```
-python3 test.py --f
+python3 test.py ----folder_test [path to folder test]
+
 ```
