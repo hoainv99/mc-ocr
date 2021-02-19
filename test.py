@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import csv
 import argparse
 from utils import rotate_box,align_box,get_idx
-from modules.text_detection.predict import test_net,net,refine_net,poly
+from modules.text_detect.predict import test_net,net,refine_net,poly
 from modules.image_clf.predict import Predictor_image
 from PIL import Image
 # from modules.text_recognition.predict import text_recognizer
