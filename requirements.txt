@@ -1,9 +1,9 @@
-efficientnet_pytorch
-albumentations
+efficientnet_pytorch==0.7.0
+albumentations==0.5.2
 vietocr==0.3.5
-transformers
-vncorenlp
+transformers==3.4.0
+vncorenlp==1.0.3
 scikit-learn==0.22.2.post1
 torch==1.7.1
 torchvision==0.8.2
-imutils
+imutils==0.5.3
