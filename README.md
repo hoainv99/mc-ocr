@@ -16,12 +16,13 @@ python3 -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 ### Run evaluate with pre-trained model
 1. Download pretrained model from [here](https://drive.google.com/drive/folders/1W-O3hPQc4szNezeZQnowNrn46tcgLwz8?usp=sharing)
 2. Add pretrained file to folder `weights/`
-3. Run test.py
+3. Run test.py to get file results.csv
 ```
 python3 test.py ----folder_test [path to folder test]
 
 ```
-## Our pipeline
+
+## Our pipeline and result
 ### Segmentation
 ![](./images/segmentation.png)
 ### Rotate image
