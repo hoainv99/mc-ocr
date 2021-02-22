@@ -19,7 +19,7 @@ python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 python3 test.py ----folder_test [path to folder test]
 
 ```
-## Results
+## Our pipeline
 ### Segmentation
 ![](./images/segmentation.png)
 ### Rotate image
@@ -28,7 +28,7 @@ python3 test.py ----folder_test [path to folder test]
 ![](./images/classification.png)
 ### Align image
 ![](./images/align_image.png)
-### Final our result
+## Final our result
 ![](./images/final_result.png)
 
 
