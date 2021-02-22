@@ -9,7 +9,7 @@ pip install -r requirements.txt
 ```
 Then :
 ```
-python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+python3 -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 ```
 ### Run evaluate with pre-trained model
 1. Download pretrained model from [here](https://drive.google.com/drive/folders/1W-O3hPQc4szNezeZQnowNrn46tcgLwz8?usp=sharing)
