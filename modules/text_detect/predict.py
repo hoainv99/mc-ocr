@@ -6,8 +6,8 @@ import time
 import cv2
 import numpy as npư
 from .modules_craft import *
-pretrained = 'modules/text_detection/weights/craft_mlt_25k.pth'
-refiner_model = 'modules/text_detection/weights/craft_refiner_CTW1500.pth'
+pretrained = 'weights/craft_mlt_25k.pth'
+refiner_model = 'weights/craft_refiner_CTW1500.pth'
 def copyStateDict(state_dict):
     if list(state_dict.keys())[0].startswith("module"):
         start_idx = 1
