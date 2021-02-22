@@ -21,7 +21,7 @@ python3 test.py ----folder_test [path to folder test]
 ```
 ## Results
 ### Segmentation
-![](./images/segmentaion.png)
+![](./images/segmentation.png)
 ### Rotate image
 ![](./images/rotate_image.png)
 ### Classification
