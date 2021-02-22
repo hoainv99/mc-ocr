@@ -21,14 +21,14 @@ python3 test.py ----folder_test [path to folder test]
 ```
 ## Results
 ### Segmentation
-![](./images/Screenshot from 2021-02-22 09-43-33.png)
+![](./images/segmentaion.png)
 ### Rotate image
-![](./images/Screenshot from 2021-02-22 09-43-50.png)
+![](./images/rotate_image.png)
 ### Classification
-![](./images/Screenshot from 2021-02-22 09-44-08.png)
+![](./images/classification.png)
 ### Align image
-![](./images/Screenshot from 2021-02-22 09-44-30.png)
+![](./images/align_image.png)
 ### Final our result
-![](./images/Screenshot from 2021-02-22 09-46-38.png)
+![](./images/final_result.png)
 
 
