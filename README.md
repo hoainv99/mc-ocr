@@ -18,7 +18,7 @@ python3 -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 2. Add pretrained file to folder `weights/`
 3. Run test.py to get file results.csv
 ```
-python3 test.py -folder_test [path to folder test]
+python3 test.py --folder_test [path to folder test]
 
 ```
 
