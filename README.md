@@ -3,7 +3,7 @@
 The Mobile capture receipts Optical Character Recognition (MC-OCR) challenge deliver two tasks: Receipt Image Quality Evaluation and OCR Recognition. In the first task,we  introduce a regression model to map various inputs such as the probability of the output OCR, cropped text  boxes, images to their label. In the second task, we propose a stacked multi-model as a solution to tackle this problem. The robust models are incorporated by image segmentation, image classification, text detection, text  recognition, and text classification. Follow this solution, we can get vital tackle  various noise receipt types such as horizontal, skew, and blur receipt.
 ## Dataset
 Dataset have 3 parts include training data, public test data and privated test data.The training set have 1,155 training examples with the respective annotated information. The public testing set consists of 391 examples without annotations. The private testing set consists of 390 examples without annotations.
-All of these will be found in this [link](https://drive.google.com/file/d/1hWgy6fQZoJM_ruG36n29mvER3sJiLdV-/view?usp=sharing)
+All of these will be found in original [website](https://www.rivf2021-mc-ocr.vietnlp.com/)
 ## Getting Started
 ### Requirement
 Our code have to run with GPU device, thank you.
